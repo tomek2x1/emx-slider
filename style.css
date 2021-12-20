@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media all and (min-width: 561px) {
+  .carousel-container {
+    width: 561px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .carousel-container {
+    width: 768px;
+  }
+}
+
+@media all and (min-width: 980px) {
+  .carousel-container {
+    width: 980px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .carousel-container {
+    width: 1200px;
+  }
+}
+
+.carousel-container .carousel-slide {
+  display: flex;
+  width: 100%;
+}
+
+.carousel-container .carousel-arrow-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  background: black;
+  opacity: 0;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.carousel-container:hover .carousel-arrow-container {
+  opacity: 0.65;
+}
+
+.carousel-container #prevBtn {
+  left: 0;
+}
+
+.carousel-container #prevBtn:hover .fa-arrow-left {
+  color: #f37043;
+}
+
+.carousel-container #nextBtn {
+  right: 0;
+}
+
+.carousel-container #nextBtn:hover .fa-arrow-right {
+  color: #f37043;
+}
+
+.carousel-dots-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-dots {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carousel-dot {
+  margin: 10px 5px;
+  height: 12px;
+  width: 12px;
+  background: #efefef;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carousel-dot:hover {
+  background: #f37043;
+}
+
+.carousel-dot-active {
+  background: #f37043;
+}
+
+.carousel-mImages-wrapper {
+  display: none;
+}
+
+.carousel-mImages {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-mImage {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.carousel-mImage-bar {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  display: inline-block;
+  height: 3px;
+  background-color: #f37043;
+  width: 0;
+}
+
+@media all and (min-width: 768px) {
+  .carousel-dots-wrapper {
+    display: none;
+  }
+
+  .carousel-mImages-wrapper {
+    display: initial;
+  }
+}
